@@ -46,7 +46,7 @@ files.forEach((filePath) => {
 
       if (isReactComponent) {
         reactFilesConverted++;
-        fs.renameSync(filePath, `${filePath}x`);
+        execSync(`git mv ${filePath} ${filePath}x`);
       }
     }
   } catch (e) {
